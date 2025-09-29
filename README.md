@@ -1,5 +1,5 @@
 
-# WeatherWalay — Next.js Frontend (Final)
+# WeatherWalay — Next.js Frontend
 
 This frontend is built to work with your existing NestJS backend (assumed on localhost). It implements:
 - Conversations sidebar + Agents list

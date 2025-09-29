@@ -22,7 +22,6 @@ export default function Sidebar({ conversations, activeId, agents, onSelectConv,
 
       <div className="flex-1 overflow-auto p-2 space-y-3">
         <div>
-          <button onClick={onNewConv} className="w-full mb-3 bg-weatherGreen text-white py-2 rounded-md">+ New Conversation</button>
           <div className="text-sm font-semibold mb-2">Conversations</div>
           {conversations.map(c => (
             <div key={c._id} onClick={()=>onSelectConv(c._id)} className={clsx('p-3 rounded-md mb-2 cursor-pointer', activeId===c._id ? 'bg-green-50 border-l-4 border-weatherGreen':'hover:bg-gray-50')}>

@@ -5,7 +5,7 @@ import clsx from 'clsx'
 type Conv = { _id: string, name: string, deleted?: boolean, agent_id: string, user_id: string,  }
 type Agent = { _id: string, name: string, description: object, agent_config: object, created_on?: string }
 
-export default function Sidebar({ conversations, activeId, agents, onSelectConv, onNewConv, onStartWithAgent }: {
+export default function Sidebar({ conversations, activeId, agents, onSelectConv, onStartWithAgent }: {
   conversations: Conv[],
   activeId?: string,
   agents: Agent[],

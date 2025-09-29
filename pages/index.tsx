@@ -158,7 +158,7 @@ export default function Home() {
     const resp = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL || ''}/chat`, { agent_id: agentId, name: `Chat — ${agentId}` }, { headers: { Authorization: token, "X-AUTH-STRATEGY": strategy }, withCredentials: true });
     const list = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL || ''}/chat`, { headers: { Authorization: token, "X-AUTH-STRATEGY": strategy }, withCredentials: true });
     setConversations(list.data.record || []);
-    setActive(resp.data.record.id);
+    setActive(resp.data.record._id);
     setMessages([]);
   }
 
@@ -190,7 +190,7 @@ export default function Home() {
     <div className="min-h-screen p-6">
       <div className="max-w-7xl mx-auto grid grid-cols-4 gap-6">
         <div className="col-span-1 h-[82vh] bg-white rounded-xl shadow p-0">
-          <Sidebar conversations={conversations} activeId={activeRef.current} agents={agents} onSelectConv={selectConv} onNewConv={createNew} onStartWithAgent={startWithAgent} />
+          <Sidebar conversations={conversations} activeId={activeRef.current} agents={agents} onSelectConv={selectConv} onStartWithAgent={startWithAgent} />
         </div>
         <div className="col-span-3 h-[82vh] bg-white rounded-xl shadow p-0 flex flex-col">
           <div className="p-4 border-b">

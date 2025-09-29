@@ -10,7 +10,6 @@ export default function Sidebar({ conversations, activeId, agents, onSelectConv,
   activeId?: string,
   agents: Agent[],
   onSelectConv: (id:string)=>void,
-  onNewConv: ()=>void,
   onStartWithAgent: (agentId:string)=>void
 }) {
   return (
